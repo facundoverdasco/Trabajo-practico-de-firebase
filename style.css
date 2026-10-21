@@ -5,36 +5,63 @@ body {
     padding: 0;
     color: #333;
 }
+
 h1 {
     background-color: #1976a3;
     color: white;
     text-align: center;
     padding: 25px;
     margin: 0 0 30px 0;
+    transition: 0.3s;
 }
+
+h1:hover {
+    letter-spacing: 2px;
+}
+
 h2 {
     color: #1976a3;
     text-align: center;
     margin-top: 40px;
 }
-body > p,
+
+body > p:first-of-type {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+    margin-left: 0; 
+}
+
+body > p:not(:first-of-type),
 body > input {
     margin-left: 20%;
 }
+
 p {
     font-weight: bold;
     margin-bottom: 5px;
 }
-input[type="text"] {
+
+input[type="text"],
+input[type="number"] {
     width: 55%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 15px;
+    transition: 0.3s;
 }
-#Guardar {
-    display: block;
-    margin-top: 20px;
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #1976a3;
+    transform: scale(1.02);
+    outline: none;
+}
+
+#Guardar,
+#btnBuscar,
+#btnVerTodos {
     padding: 10px 25px;
     background-color: #1976a3;
     color: white;
@@ -42,77 +69,60 @@ input[type="text"] {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: 0.3s;
 }
+
+#Guardar {
+    display: block;
+    margin-top: 20px;
+    margin-left: 20%; 
+}
+
+#btnBuscar,
+#btnVerTodos {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 20%; 
+}
+
+#btnBuscar:hover,
+#btnVerTodos:hover,
 #Guardar:hover {
     background-color: #145d80;
+    transform: scale(1.08);
 }
+
+#btnBuscar:active,
+#btnVerTodos:active,
+#Guardar:active {
+    transform: scale(0.95);
+}
+
 table {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
     background-color: white;
 }
+
 th {
     background-color: #1976a3;
     color: white;
     padding: 12px;
 }
+
 td {
     padding: 10px;
     text-align: center;
     border: 1px solid #ddd;
+    transition: 0.2s;
 }
+
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
-#Guardar {
-    display: block;
-    margin-top: 20px;
-    padding: 10px 25px;
-    background-color: #1976a3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
 
-    transition: 0.3s;
-}
-#Guardar:hover {
-    background-color: #145d80;
-    transform: scale(1.08);
-}
-#Guardar:active {
-    transform: scale(0.95);
-}
-input[type="text"] {
-    width: 55%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 15px;
-
-    transition: 0.3s;
-}
-input[type="text"]:focus {
-    border-color: #1976a3;
-    transform: scale(1.02);
-    outline: none;
-}
-td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-
-    transition: 0.2s;
-}
 tr:hover {
     background-color: #dceff7;
     transform: scale(1.01);
-}
-h1 {
-    transition: 0.3s;
-}
-h1:hover {
-    letter-spacing: 2px;
 }
